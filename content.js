@@ -1,0 +1,1 @@
+setInterval(()=>{let a=document.querySelector('.js-new-tweets-bar');a&&a.click()},1e3);

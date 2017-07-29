@@ -1,13 +1,14 @@
 let timeline = document.getElementById('timeline');
 
 setInterval(() => {
-    let bar    = document.querySelector('.js-new-tweets-bar'),
-        top    = document.body.scrollTop,
-        height = timeline.offsetHeight;
+    let bar = document.querySelector('.js-new-tweets-bar');
 
     if (!bar) {
         return;
     }
+
+    let top    = document.body.scrollTop,
+        height = timeline.offsetHeight;
 
     bar.click();
 

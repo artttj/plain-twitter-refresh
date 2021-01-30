@@ -1,4 +1,3 @@
-let timeline = document.querySelectorAll(`[data-testid=titleContainer]`);
 
 setInterval(() => {
     // looking for text in a span

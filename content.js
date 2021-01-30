@@ -1,13 +1,12 @@
-let timeline = document.getElementById('timeline');
+let timeline = document.querySelectorAll(`[data-testid=titleContainer]`);
 
 setInterval(() => {
-    let bar     = document.querySelector('.js-new-items-bar-container .js-new-tweets-bar'),
-        top     = document.body.scrollTop,
-        height  = timeline.offsetHeight,
-        refresh = () => {
-            bar.click();
-            window.scrollTo(0, top + (timeline.offsetHeight - height));
-        };
+    // looking for text in a span
+    let latest_tweets = $("span:contains('Latest Tweets')");
+    let refresh = () => {
+        latest_tweets.click();
+    };
 
-    return bar ? refresh() : false;
-}, 1000);
+    return latest_tweets ? refresh() : false;
+    // refresh every minute
+},  60000);
